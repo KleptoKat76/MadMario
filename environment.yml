@@ -8,7 +8,7 @@ dependencies:
   - setuptools=46.4.0=py38_0
   - wheel=0.34.2=py38_0
   - pip:
-    - zlib=1.2.11=h1de35cc_3
+    - zlib==1.2.11=h1de35cc_3
     - openssl=1.1.1g=h1de35cc_0
     - ncurses=6.2=h0a44026_1
     - libcxx=10.0.0=1
