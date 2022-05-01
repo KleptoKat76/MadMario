@@ -13,7 +13,7 @@ dependencies:
     - ncurses==6.2=h0a44026_1
     - libcxx==10.0.0=1
     - sqlite==3.31.1=h5c1f38d_1
-    - tk=8.6.8==ha441bb4_0
+    - tk==8.6.8==ha441bb4_0
     - libffi==3.3=h0a44026_1
     - python==3.8.3=h26836e1_1
     - xz==5.2.5=h1de35cc_0
