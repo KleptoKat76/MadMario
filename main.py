@@ -26,11 +26,11 @@ env = JoypadSpace(
 )
 
 # Apply Wrappers to environment
-env = SkipFrame(env, skip=4)
+env = SkipFrame(env, skip=8)
 env = GrayScaleObservation(env, keep_dim=False)
 env = ResizeObservation(env, shape=84)
 env = TransformObservation(env, f=lambda x: x / 255.)
-env = FrameStack(env, num_stack=4)
+env = FrameStack(env, num_stack=8)
 
 env.reset()
 
@@ -38,7 +38,7 @@ save_dir = Path('checkpoints') / datetime.datetime.now().strftime('%Y-%m-%dT%H-%
 save_dir.mkdir(parents=True)
 
 checkpoint = None # Path('checkpoints/2020-10-21T18-25-27/mario.chkpt')
-mario = Mario(state_dim=(4, 84, 84), action_dim=env.action_space.n, save_dir=save_dir, checkpoint=checkpoint)
+mario = Mario(state_dim=(8, 84, 84), action_dim=env.action_space.n, save_dir=save_dir, checkpoint=checkpoint)
 
 logger = MetricLogger(save_dir)
 
